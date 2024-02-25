@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/view.css">
+<div class="view">
+    <div class="inputDiv">
+        <input type="text" id="search" placeholder="search here">
+        <input type="button" value="Search" id="btn">
+    </div>
+    
+    <div class="headers">
+        <% for( element of csvFile.header_row ) { %>
+            <span class="header-element"><%= element %></span>
+        <% } %>
+    </div>
+
+    <div class="data" id="dataDiv">
+        <% csvFile.data_row.forEach(element => { %>
+            <p>
+                <% Object.keys(element).forEach(key=>{ %>
+                    <span><%= element[key] %></span>
+                <% }) %>
+            </p>
+            
+        <% }) %>
+    </div>
+</div>
+
+<script>
+    
+    var csvData = JSON.parse(decodeURIComponent("<%- encodeURIComponent(JSON.stringify(dataRow)) %>"));
+    // console.log(csvData);
+</script>
+<script src="/js/csvFile.js"></script>

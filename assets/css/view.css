@@ -1,0 +1,54 @@
+/* view styles */
+.view {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #364958;
+}
+.view .inputDiv {
+  display: flex;
+  padding: 10px;
+}
+
+/* input text  */
+.view .inputDiv #search {
+  flex: 1;
+}
+
+/* headers  */
+.view .headers {
+  text-align: center;
+  display: flex;
+  background-color: #D5DCF9;
+}
+
+/* span for header data  */
+.view .headers .header-element {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #364958;
+  border-right: 0;
+}
+.view .headers .header-element:last-child {
+  border-right: 1px solid #364958;
+}
+
+/* data div */
+.view .data {
+  display: flex;
+  flex-direction: column;
+}
+.view .data p {
+  display: flex;
+  text-align: center;
+  background-color: #CDC7E5;
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #364958;
+}
+.view .data p span {
+  flex: 1;
+  border-right: 1px solid #364958;
+}
+.view .data p:nth-child(2n) {
+  background-color: #FFFBDB;
+}

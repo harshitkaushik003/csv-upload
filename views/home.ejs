@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/home.css">
+<div class="home">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="csvFile" id="" placeholder="Upload File" accept="csv">
+        <input type="submit" value="Upload">
+    </form>
+
+    <div class="files">
+        <% for( file of csvFile ) { %>
+            <p>
+                <span><%= file.name %></span>
+                <a href="<%= file._id %>">view</a>
+            </p>
+            
+        <% } %>
+    </div>
+</div>
