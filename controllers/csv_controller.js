@@ -82,7 +82,7 @@ module.exports = {
             })
             
         } catch (error) {
-            console.log("Error in fetching view page", error);
+            
             return res.redirect('back');
         }
     }

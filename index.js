@@ -2,7 +2,7 @@
 const express = require('express');
 
 //setting up port
-const port = 3000; 
+const port = 8000; 
 
 //requiring express layouts
 const expressLayouts = require('express-ejs-layouts');
